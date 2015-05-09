@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{804d62c9-365f-4c32-95b4-6592100e3bbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc\Custom UI">
+      <UniqueIdentifier>{4030966c-eaee-4a28-9cda-85fdd4b10c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Doc">
+      <UniqueIdentifier>{5c1ff405-fe08-46d8-8429-7088d2966bec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Utility.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\IDA_Custom_UI\WaitBoxEx.h">
+      <Filter>Misc\Custom UI</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="FunctionStringAssociate.txt">
+      <Filter>Doc</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,62 @@
+
+"Function String Associate"
+===============================================================================
+An IDA Pro plug-in that comments functions by the strings it contains
+Version 1.5
+By Sirmabus
+
+-------------------------------------------------------------------------------
+
+From the chaos of a 10,000+ function target et al.., this plug-in can help
+reversing by extracting various "assert" and other (variables, constants, etc.)
+strings; making some sense of it all by adding info as a function comment for
+browsing.
+As you browse around at a glance these comments might tell you to a greater or
+lessor degree what a particular function might do, what area it belongs to,
+etc.
+
+In some targets there are tons of these useful strings, on others very few if
+any at all. Thus the information will either be great or little to nothing.
+
+-- [Install] ------------------------------------------------------------------
+Copy the plug-in to your IDA Pro "plugins" folder.
+Edit your "plugins.cfg" with a hotkey to run.
+
+Example:
+"FunctionStringAssociate IDA_FunctionStringAssociate_PlugIn.plw Alt-6 0"
+
+See official IDA docs for more help on on installing and configuring plug-ins.
+
+
+-- [How to run it] ------------------------------------------------------------
+Just invoke it using your selected IDA hot-key or from "Edit->Plugins" menu.
+
+
+-- [How it works] -------------------------------------------------------------
+Iterates every function in the loaded IDB; In each function iterates it's
+elements looking for string references; Then sorts these with some assumptions
+about relevance and places them as a function comment.
+
+-Sirmabus
+
+-- [Changes] ------------------------------------------------------------------
+1.5 - 1) Replaced the std::vector array with a static one.
+      2) Added a E64 version.
+
+1.4 - 1) Now properly iterates functions as blocks rather then assuming they
+         are all contiguous chunks.
+      2) Updated and fixed some custom UI elements.
+      3) Some speed optimization.
+
+1.3 - 1) Increased maximum string length.
+      2) Changed the starting tag from "<" to "STR:", and removed the end '<'.
+      3) Added customized dialogs.
+
+
+Terms of Use
+-------------------------------------------------------------------------------
+This software is provided "as is", without any guarantee made as to its
+suitability, or fitness for any particular use. It may contain bugs, so use
+this software is at your own risk.  The author takes no responsibly for
+any damage that might be caused through its use.
+
